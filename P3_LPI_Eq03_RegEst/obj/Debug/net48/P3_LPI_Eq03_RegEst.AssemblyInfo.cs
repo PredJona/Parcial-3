@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P3_LPI_Eq03_RegEst")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b170cd81b7284df1ac1717780b3622f29268e51e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d34a994d8ee326c7bea0d8d3b23d66891fbfc6d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("P3_LPI_Eq03_RegEst")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P3_LPI_Eq03_RegEst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
