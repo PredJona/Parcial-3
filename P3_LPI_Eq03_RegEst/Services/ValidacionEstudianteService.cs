@@ -5,7 +5,7 @@ using P3_LPI_Eq03_RegEst.Models;
 
 namespace P3_LPI_Eq03_RegEst.Services
 {
-    // Responsable: __________________________
+    // Responsable: Jose Martinez
     // Rol: Validaciones, utilidades del sistema y formulario de informacion general.
     public class ValidacionEstudianteService
     {

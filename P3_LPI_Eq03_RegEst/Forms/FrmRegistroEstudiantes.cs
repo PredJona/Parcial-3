@@ -10,7 +10,7 @@ using P3_LPI_Eq03_RegEst.Services;
 
 namespace P3_LPI_Eq03_RegEst.Forms
 {
-    // Responsable: __________________________
+    // Responsable: Jonathan Romero
     // Rol: Diseno de interfaz grafica, eventos visuales y experiencia de usuario.
     public partial class FrmRegistroEstudiantes : Form
     {

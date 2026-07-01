@@ -5,7 +5,7 @@ using P3_LPI_Eq03_RegEst.Models;
 
 namespace P3_LPI_Eq03_RegEst.Services
 {
-    // Responsable: __________________________
+    // Responsable: Davis Batista
     // Rol: Logica de registro, consulta, listado y eliminacion de estudiantes.
     public class RegistroEstudiantesService
     {

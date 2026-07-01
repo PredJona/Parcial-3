@@ -6,7 +6,7 @@ namespace P3_LPI_Eq03_RegEst
 {
     internal static class Program
     {
-        // TODO: Colocar numero real del equipo.
+        
 
         [STAThread]
         private static void Main()
