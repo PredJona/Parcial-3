@@ -26,3 +26,4 @@ C:\Users\jr215\OneDrive\Documentos\trabajos universidad\Parcial3_LPI_Eq03\P3_LPI
 C:\Users\jr215\OneDrive\Documentos\trabajos universidad\Parcial3_LPI_Eq03\P3_LPI_Eq03_RegEst\obj\Debug\net48\P3_LPI_E.76AD70F9.Up2Date
 C:\Users\jr215\OneDrive\Documentos\trabajos universidad\Parcial3_LPI_Eq03\P3_LPI_Eq03_RegEst\obj\Debug\net48\P3_LPI_Eq03_RegEst.exe
 C:\Users\jr215\OneDrive\Documentos\trabajos universidad\Parcial3_LPI_Eq03\P3_LPI_Eq03_RegEst\obj\Debug\net48\P3_LPI_Eq03_RegEst.pdb
+C:\Users\jr215\OneDrive\Documentos\trabajos universidad\Parcial3_LPI_Eq03\P3_LPI_Eq03_RegEst\obj\Debug\net48\P3_LPI_Eq03_RegEst.sourcelink.json
