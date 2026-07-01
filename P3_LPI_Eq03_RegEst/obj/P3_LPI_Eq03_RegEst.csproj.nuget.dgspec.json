@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+        "projectName": "P3_LPI_Eq03_RegEst",
+        "projectPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+        "packagesPath": "C:\\Users\\jr215\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jr215\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "framework": "net48",
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net48": {
+          "framework": "net48",
+          "targetAlias": "net48",
+          "dependencies": {
+            "FontAwesome.Sharp": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
+            "MaterialSkin.2": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.8.1.8, )"
+            },
+            "System.Resources.Extensions": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

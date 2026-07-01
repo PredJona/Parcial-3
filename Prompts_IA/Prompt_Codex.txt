@@ -1,0 +1,673 @@
+Actúa como un ingeniero senior de software especializado en C# Windows Forms, .NET Framework, diseño de interfaces de escritorio, buenas prácticas de Programación Orientada a Objetos y arquitectura en capas.
+
+Necesito que construyas una aplicación completa en C# Windows Forms para el Parcial No. 3 de Lenguaje de Programación I. El proyecto debe llamarse:
+
+P3_LPI_Eq03_RegEst
+
+Si el número de equipo no está definido, deja un comentario visible para reemplazarlo:
+
+// TODO: Colocar número real del equipo.
+
+La aplicación debe ser un sistema de escritorio para administrar el Registro Académico de Estudiantes de una institución académica.
+
+IMPORTANTE:
+La aplicación debe estar hecha en Windows Forms usando archivos .Designer.cs reales. No quiero formularios creados completamente por código. Los formularios deben poder abrirse desde el diseñador visual de Visual Studio. Cada formulario debe tener su archivo:
+
+- Formulario.cs
+- Formulario.Designer.cs
+- Formulario.resx
+
+Usa controles de Windows Forms y, donde sea conveniente, controles visuales de las librerías:
+
+- ReaLTaiizor
+- FontAwesome.Sharp
+- MaterialSkin.2
+
+Si alguna librería no está instalada, agrega los paquetes NuGet correspondientes y configura el proyecto correctamente. No uses librerías de pago.
+
+Paquetes NuGet sugeridos:
+
+- ReaLTaiizor
+- FontAwesome.Sharp
+- MaterialSkin.2
+
+El proyecto debe compilar sin errores en Visual Studio. Preferiblemente usar .NET Framework 4.8 con Windows Forms. Si el entorno no permite .NET Framework 4.8, usar Windows Forms compatible con .NET 6 o superior, pero mantener estructura de diseñador.
+
+====================================================
+CONTEXTO DEL PROBLEMA
+====================================================
+
+Una institución académica desea un sistema para administrar:
+
+- El registro de estudiantes.
+- Los cursos en los que participan.
+- Las actividades extracurriculares.
+
+Cada estudiante debe poseer como mínimo la siguiente información:
+
+1. Código de estudiante.
+2. Nombre completo.
+3. Carrera:
+   - Ingeniería de Sistemas
+   - Administración
+   - Contabilidad
+   - Derecho
+   - Arquitectura
+4. Género:
+   - Masculino
+   - Femenino
+5. Modalidad de estudio:
+   - Presencial
+   - Virtual
+   - Semipresencial
+6. Cursos:
+   - Programación I
+   - Base de Datos
+   - Redes de Computadoras
+   - Sistemas Operativos
+   - Administración Financiera
+   - Arte Digital
+   - Diseño Arquitectónico
+   - Contabilidad General
+7. Actividades extracurriculares:
+   - Deportes
+   - Música
+   - Arte
+   - Investigación
+
+La aplicación debe implementar estas funcionalidades:
+
+1. Registrar estudiantes.
+2. Mostrar los estudiantes registrados.
+3. Consultar la información almacenada de un estudiante.
+4. Eliminar registros seleccionados.
+5. Permitir la selección de cursos y actividades mediante controles adecuados.
+
+NO implementar estadísticas básicas. La funcionalidad de estadísticas queda descartada porque se eligieron las opciones 4 y 6 de la guía.
+
+====================================================
+REQUISITOS DE INTERFAZ GRÁFICA
+====================================================
+
+La interfaz debe ser moderna, clara y agradable, pero debe seguir pareciendo una aplicación Windows Forms académica.
+
+Diseño visual requerido:
+
+- Estilo moderno tipo dashboard académico.
+- Colores principales: azul, blanco, violeta o verde suave.
+- Buen contraste.
+- Tipografía legible.
+- Iconos con FontAwesome.Sharp.
+- Secciones separadas con paneles o cards.
+- Botones claros y alineados.
+- Nada desordenado.
+- No usar una interfaz sosa o vacía.
+- No generar una pantalla demasiado cargada.
+
+Formulario principal sugerido:
+
+FrmRegistroEstudiantes
+
+Debe contener estas secciones:
+
+1. Encabezado superior:
+   - Nombre de la app: “EduRegistro”
+   - Título: “Registro de Estudiantes”
+   - Subtítulo: “Sistema de Registro Académico de Estudiantes”
+   - Icono académico.
+   - Datos de asignatura, grupo, equipo y usuario/máquina en una zona visible o en pantalla Acerca de.
+
+2. Datos personales:
+   - TextBox para código de estudiante.
+   - TextBox para nombre completo.
+   - RadioButton para género masculino.
+   - RadioButton para género femenino.
+
+3. Datos académicos:
+   - ComboBox para carrera.
+   - ComboBox para modalidad de estudio.
+   - ComboBox para tipo de curso si se desea clasificar como Normal/Seminario.
+   - ComboBox para jornada académica si se desea mejorar la interfaz:
+     - Matutina
+     - Vespertina
+     - Nocturna
+
+Aunque tipo de curso y jornada no están como datos mínimos en la segunda hoja del problema, pueden incluirse como mejora visual siempre que no afecten los requisitos principales.
+
+4. Cursos inscritos:
+   - CheckedListBox o panel con CheckBox para seleccionar varios cursos.
+   - Cursos obligatorios:
+     - Programación I
+     - Base de Datos
+     - Redes de Computadoras
+     - Sistemas Operativos
+     - Administración Financiera
+     - Arte Digital
+     - Diseño Arquitectónico
+     - Contabilidad General
+
+5. Actividades extracurriculares:
+   - CheckBox para:
+     - Deportes
+     - Música
+     - Arte
+     - Investigación
+
+6. Consulta de estudiante:
+   - TextBox para buscar.
+   - ComboBox para criterio de búsqueda:
+     - Código
+     - Nombre
+     - Carrera
+     - Modalidad
+   - Botón Consultar.
+   - Botón Mostrar todos.
+
+7. Tabla de estudiantes:
+   - DataGridView para mostrar estudiantes registrados.
+   - Columnas:
+     - Código
+     - Nombre completo
+     - Carrera
+     - Género
+     - Modalidad
+     - Cursos
+     - Actividades
+   - Evitar barra horizontal.
+   - Ajustar columnas para que la información no se corte.
+   - Permitir selección de fila completa.
+   - No permitir edición directa desde la tabla.
+   - Usar AutoSizeColumnsMode adecuado.
+   - Usar barra vertical si hay muchos registros.
+
+8. Botones de acciones:
+   - Agregar estudiante.
+   - Consultar estudiante.
+   - Mostrar todos.
+   - Eliminar estudiante.
+   - Limpiar campos.
+   - Salir.
+
+Opcionalmente agregar:
+   - Botón Modificar estudiante, pero no es obligatorio según la selección actual. Si lo agregas, debe funcionar correctamente y no romper la simplicidad del sistema.
+
+====================================================
+REQUISITOS FUNCIONALES
+====================================================
+
+La aplicación debe permitir:
+
+1. Registrar estudiantes:
+   - Capturar datos desde la interfaz.
+   - Validar campos obligatorios.
+   - Crear objeto Estudiante.
+   - Guardarlo en una lista en memoria.
+   - Mostrarlo en el DataGridView.
+   - Limpiar campos después de agregar.
+   - Evitar códigos duplicados.
+
+2. Mostrar estudiantes registrados:
+   - Mostrar todos los estudiantes en el DataGridView.
+   - Debe haber datos de prueba opcionales solo para demostración, pero el usuario debe poder ingresar datos reales.
+   - Los datos no deben ser únicamente fijos o constantes.
+
+3. Consultar estudiante:
+   - Buscar por código, nombre, carrera o modalidad.
+   - Mostrar coincidencias en el DataGridView.
+   - Si no hay resultados, mostrar MessageBox informativo.
+   - Botón “Mostrar todos” debe restaurar la tabla completa.
+
+4. Eliminar registro seleccionado:
+   - Seleccionar una fila del DataGridView.
+   - Presionar Eliminar.
+   - Confirmar con MessageBox.
+   - Eliminar el estudiante de la lista.
+   - Actualizar tabla.
+   - Si no hay fila seleccionada, mostrar advertencia.
+
+5. Selección de cursos y actividades:
+   - Debe permitir seleccionar varios cursos.
+   - Debe permitir seleccionar varias actividades.
+   - Validar que al menos un curso sea seleccionado.
+   - Validar que al menos una actividad extracurricular sea seleccionada.
+
+6. Salir:
+   - Botón Salir con confirmación.
+   - Cierre normal de la aplicación.
+
+====================================================
+VALIDACIONES OBLIGATORIAS
+====================================================
+
+Implementar validaciones claras y con mensajes mediante MessageBox:
+
+- Código obligatorio.
+- Código no puede repetirse.
+- Código debe tener formato razonable, por ejemplo EST001.
+- Nombre completo obligatorio.
+- Nombre debe tener al menos dos palabras.
+- Carrera obligatoria.
+- Género obligatorio.
+- Modalidad obligatoria.
+- Al menos un curso seleccionado.
+- Al menos una actividad seleccionada.
+- No permitir agregar datos incompletos.
+- No permitir eliminar sin seleccionar fila.
+- Manejar excepciones con try-catch en eventos principales.
+
+Los MessageBox deben ser informativos o de advertencia, no abusar de ellos.
+
+====================================================
+BUENAS PRÁCTICAS
+====================================================
+
+Aplicar:
+
+- Programación Orientada a Objetos.
+- Separación UI, lógica y datos.
+- Nombres descriptivos.
+- Métodos pequeños y claros.
+- Validaciones separadas de la interfaz.
+- Código legible.
+- Comentarios explicativos donde realmente aporten.
+- Evitar lógica repetida.
+- Evitar código espagueti dentro de los botones.
+- Usar regiones o comentarios de organización si ayuda.
+- No dejar errores de compilación.
+- No dejar controles con nombres genéricos como button1, textBox1, label1.
+- Usar nombres como:
+  - txtCodigo
+  - txtNombreCompleto
+  - cmbCarrera
+  - cmbModalidad
+  - rbtnMasculino
+  - rbtnFemenino
+  - clbCursos
+  - chkDeportes
+  - chkMusica
+  - chkArte
+  - chkInvestigacion
+  - dgvEstudiantes
+  - btnAgregar
+  - btnConsultar
+  - btnMostrarTodos
+  - btnEliminar
+  - btnLimpiar
+  - btnSalir
+
+====================================================
+ARQUITECTURA DEL PROYECTO
+====================================================
+
+Crear una estructura de carpetas limpia:
+
+P3_LPI_Eq03_RegEst
+│
+├── Models
+│   └── Estudiante.cs
+│
+├── Services
+│   ├── RegistroEstudiantesService.cs
+│   └── ValidacionEstudianteService.cs
+│
+├── Helpers
+│   ├── UiHelper.cs
+│   └── SistemaHelper.cs
+│
+├── Forms
+│   ├── FrmRegistroEstudiantes.cs
+│   ├── FrmRegistroEstudiantes.Designer.cs
+│   ├── FrmRegistroEstudiantes.resx
+│   ├── FrmAcercaDe.cs
+│   ├── FrmAcercaDe.Designer.cs
+│   └── FrmAcercaDe.resx
+│
+├── Program.cs
+└── README.md
+
+====================================================
+CLASES A CREAR Y DIVISIÓN PARA 4 PERSONAS
+====================================================
+
+Cada clase debe tener al inicio un comentario para que los integrantes escriban su nombre.
+
+Ejemplo:
+
+// Responsable: __________________________
+// Integrante encargado de esta clase.
+
+Dividir así:
+
+----------------------------------------------------
+PERSONA 1: Interfaz gráfica principal
+----------------------------------------------------
+
+Archivos:
+
+- FrmRegistroEstudiantes.cs
+- FrmRegistroEstudiantes.Designer.cs
+- FrmRegistroEstudiantes.resx
+
+Responsabilidad:
+
+- Diseñar el formulario principal.
+- Crear y ordenar controles.
+- Conectar eventos.
+- Mantener el diseño moderno.
+- Usar ReaLTaiizor, FontAwesome.Sharp y MaterialSkin.2 donde aporte.
+- No poner toda la lógica de negocio en el formulario.
+- El formulario debe llamar a los servicios.
+
+Comentario obligatorio:
+
+// Responsable: __________________________
+// Rol: Diseño de interfaz gráfica, eventos visuales y experiencia de usuario.
+
+----------------------------------------------------
+PERSONA 2: Modelo y entidades
+----------------------------------------------------
+
+Archivo:
+
+- Models/Estudiante.cs
+
+Responsabilidad:
+
+- Crear la clase Estudiante.
+- Definir propiedades.
+- Crear constructor vacío.
+- Crear constructor completo.
+- Crear método para mostrar cursos como texto.
+- Crear método para mostrar actividades como texto.
+
+La clase debe tener como mínimo:
+
+- Codigo
+- NombreCompleto
+- Carrera
+- Genero
+- Modalidad
+- ListaCursos
+- ListaActividades
+
+Opcional:
+
+- TipoCurso
+- Jornada
+
+Comentario obligatorio:
+
+// Responsable: __________________________
+// Rol: Modelo de datos y estructura de la entidad Estudiante.
+
+----------------------------------------------------
+PERSONA 3: Lógica de registro y consulta
+----------------------------------------------------
+
+Archivo:
+
+- Services/RegistroEstudiantesService.cs
+
+Responsabilidad:
+
+- Mantener lista de estudiantes.
+- Agregar estudiante.
+- Consultar por código.
+- Consultar por nombre.
+- Consultar por carrera.
+- Consultar por modalidad.
+- Obtener todos los estudiantes.
+- Eliminar estudiante por código.
+- Verificar código duplicado.
+
+Comentario obligatorio:
+
+// Responsable: __________________________
+// Rol: Lógica de registro, consulta, listado y eliminación de estudiantes.
+
+----------------------------------------------------
+PERSONA 4: Validaciones, helpers y pantalla Acerca de
+----------------------------------------------------
+
+Archivos:
+
+- Services/ValidacionEstudianteService.cs
+- Helpers/UiHelper.cs
+- Helpers/SistemaHelper.cs
+- Forms/FrmAcercaDe.cs
+
+Responsabilidad:
+
+- Validar datos obligatorios.
+- Validar formato de código.
+- Validar nombre completo.
+- Validar selección de cursos.
+- Validar selección de actividades.
+- Crear mensajes de error claros.
+- Obtener nombre de usuario y máquina.
+- Crear pantalla Acerca de con información del curso, equipo, integrantes, versión de Visual Studio y framework.
+
+Comentario obligatorio:
+
+// Responsable: __________________________
+// Rol: Validaciones, utilidades del sistema y formulario de información general.
+
+====================================================
+DETALLE DE CADA CLASE
+====================================================
+
+1. Estudiante.cs
+
+Debe ser una clase limpia, sin controles visuales.
+
+Propiedades:
+
+- string Codigo
+- string NombreCompleto
+- string Carrera
+- string Genero
+- string Modalidad
+- List<string> Cursos
+- List<string> Actividades
+- string TipoCurso opcional
+- string Jornada opcional
+
+Métodos:
+
+- string ObtenerCursosComoTexto()
+- string ObtenerActividadesComoTexto()
+
+2. RegistroEstudiantesService.cs
+
+Debe manejar la lista privada:
+
+private readonly List<Estudiante> _estudiantes;
+
+Métodos:
+
+- List<Estudiante> ObtenerTodos()
+- bool ExisteCodigo(string codigo)
+- void Agregar(Estudiante estudiante)
+- List<Estudiante> Consultar(string criterio, string valor)
+- bool EliminarPorCodigo(string codigo)
+
+3. ValidacionEstudianteService.cs
+
+Métodos:
+
+- bool ValidarEstudiante(Estudiante estudiante, out string mensaje)
+- bool ValidarCodigo(string codigo)
+- bool ValidarNombreCompleto(string nombre)
+- bool ValidarCursos(List<string> cursos)
+- bool ValidarActividades(List<string> actividades)
+
+4. SistemaHelper.cs
+
+Métodos:
+
+- string ObtenerNombreUsuario()
+- string ObtenerNombreMaquina()
+- string ObtenerFechaActual()
+
+5. UiHelper.cs
+
+Métodos:
+
+- void MostrarInformacion(string mensaje)
+- void MostrarAdvertencia(string mensaje)
+- bool Confirmar(string mensaje)
+
+6. FrmAcercaDe.cs
+
+Debe mostrar:
+
+- Universidad Tecnológica de Panamá.
+- Facultad de Ingeniería de Sistemas Computacionales.
+- Departamento de Programación de Computadoras.
+- Asignatura: Lenguaje de Programación I.
+- Parcial No. 3.
+- Grupo: 1SF12.
+- Equipo: TODO colocar número.
+- Integrantes:
+  - TODO: Integrante 1
+  - TODO: Integrante 2
+  - TODO: Integrante 3
+  - TODO: Integrante 4
+- Nombre de aplicación: EduRegistro.
+- Descripción del problema.
+- Descripción de la solución.
+- Framework utilizado.
+- Versión de Visual Studio: TODO colocar versión real.
+- Máquina.
+- Usuario.
+
+====================================================
+REQUISITOS DEL DISEÑO DEL FORMULARIO
+====================================================
+
+El formulario principal debe parecerse a una aplicación académica moderna.
+
+Distribución recomendada:
+
+Parte superior:
+- Header azul con ícono académico y título.
+
+Zona central izquierda:
+- Card “Datos personales”.
+- Card “Datos académicos”.
+
+Zona central:
+- Card “Cursos inscritos”.
+- Card “Actividades extracurriculares”.
+
+Zona derecha:
+- Card “Consultar estudiante”.
+- Card “Acciones”.
+
+Parte inferior:
+- Tabla DataGridView con estudiantes registrados.
+- Barra inferior con usuario, máquina, total de estudiantes y estado.
+
+No incluir sección de estadísticas.
+
+====================================================
+REQUISITOS DEL DATAGRIDVIEW
+====================================================
+
+Configurar DataGridView así:
+
+- ReadOnly = true
+- SelectionMode = FullRowSelect
+- MultiSelect = false
+- AllowUserToAddRows = false
+- AllowUserToDeleteRows = false
+- AutoSizeColumnsMode = Fill
+- RowHeadersVisible = false, salvo que se quiera mostrar indicador de selección.
+- No debe aparecer barra horizontal si es posible.
+- Encabezados claros.
+
+Columnas:
+
+- Codigo
+- NombreCompleto
+- Carrera
+- Genero
+- Modalidad
+- Cursos
+- Actividades
+
+====================================================
+DATOS DE PRUEBA
+====================================================
+
+Agregar un método llamado CargarDatosDePrueba(), pero debe estar claramente separado.
+
+Debe cargar mínimo 3 estudiantes para demostrar la aplicación, por ejemplo:
+
+1. EST001 - Juan Pérez López - Ingeniería de Sistemas - Masculino - Presencial - Programación I, Base de Datos - Deportes
+2. EST002 - María González Ruiz - Administración - Femenino - Virtual - Administración Financiera, Arte Digital - Música, Arte
+3. EST003 - Carlos Díaz Ortega - Contabilidad - Masculino - Semipresencial - Contabilidad General, Sistemas Operativos - Investigación
+
+Importante:
+Los datos de prueba no deben impedir que el usuario registre nuevos estudiantes.
+
+====================================================
+README
+====================================================
+
+Crear un archivo README.md con:
+
+- Nombre del proyecto.
+- Descripción.
+- Funcionalidades implementadas.
+- Librerías utilizadas.
+- Cómo ejecutar el proyecto.
+- Estructura del proyecto.
+- Integrantes con espacio para llenar nombres.
+- Nota de que no se implementó la funcionalidad de estadísticas porque se eligieron las funcionalidades 4 y 6.
+
+====================================================
+ENTREGA DESCARGABLE
+====================================================
+
+Al finalizar, crea una carpeta lista para entregar llamada:
+
+Parcial3_LPI_Eq03
+
+Dentro debe estar:
+
+- El proyecto completo.
+- README.md.
+- Carpeta Prompts_IA con un archivo Prompt_Codex.txt que contenga este prompt.
+- Carpeta Evidencias con un archivo INSTRUCCIONES_CAPTURAS.txt explicando que deben tomar 3 capturas completas con datos distintos.
+- Carpeta CodigoPDF con un README indicando que allí deben colocar los PDF de los códigos fuente exportados desde Visual Studio.
+
+Luego comprime la carpeta completa en:
+
+Parcial3_LPI_Eq03.zip
+
+La solución debe quedar lista para descargar como ZIP.
+
+====================================================
+REGLAS FINALES
+====================================================
+
+Antes de terminar:
+
+1. Compila el proyecto.
+2. Corrige errores.
+3. Verifica que los formularios abran en Designer.
+4. Verifica que los botones funcionen.
+5. Verifica agregar estudiante.
+6. Verifica consultar estudiante.
+7. Verifica mostrar todos.
+8. Verifica eliminar seleccionado.
+9. Verifica limpiar campos.
+10. Verifica salir con confirmación.
+11. Verifica que no exista la sección de estadísticas.
+12. Verifica que el código tenga comentarios de responsable en las clases.
+13. Verifica que no existan controles llamados button1, textBox1, label1, etc.
+14. Verifica que el DataGridView no corte la información.
+15. Verifica que la aplicación sea agradable, ordenada y defendible para una sustentación académica.
+
+Entrega el código completo, funcional, organizado y listo para abrir en Visual Studio.

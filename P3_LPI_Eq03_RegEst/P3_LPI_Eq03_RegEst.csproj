@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>P3_LPI_Eq03_RegEst</RootNamespace>
+    <AssemblyName>P3_LPI_Eq03_RegEst</AssemblyName>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Deterministic>true</Deterministic>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="ReaLTaiizor" Version="3.8.1.8" />
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\FrmRegistroEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FrmRegistroEstudiantes.Designer.cs">
+      <DependentUpon>FrmRegistroEstudiantes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\FrmRegistroEstudiantes.resx">
+      <DependentUpon>FrmRegistroEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\FrmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FrmAcercaDe.Designer.cs">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\FrmAcercaDe.resx">
+      <DependentUpon>FrmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
