@@ -45,8 +45,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblFechaTitulo = new System.Windows.Forms.Label();
             this.lblFechaValor = new System.Windows.Forms.Label();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblVisualStudioValor = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAcademico)).BeginInit();
             this.SuspendLayout();
@@ -386,22 +385,16 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // label1
+            // lblVisualStudioValor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(553, 362);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 27;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(544, 362);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "2026\r\n";
+            this.lblVisualStudioValor.AutoSize = true;
+            this.lblVisualStudioValor.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblVisualStudioValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
+            this.lblVisualStudioValor.Location = new System.Drawing.Point(540, 356);
+            this.lblVisualStudioValor.Name = "lblVisualStudioValor";
+            this.lblVisualStudioValor.Size = new System.Drawing.Size(233, 23);
+            this.lblVisualStudioValor.TabIndex = 19;
+            this.lblVisualStudioValor.Text = "TODO colocar version real";
             // 
             // FrmAcercaDe
             // 
@@ -409,8 +402,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(780, 568);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVisualStudioValor);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblFechaValor);
             this.Controls.Add(this.lblFechaTitulo);
@@ -474,6 +466,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         private System.Windows.Forms.Label lblFrameworkTitulo;
         private System.Windows.Forms.Label lblFrameworkValor;
         private System.Windows.Forms.Label lblVisualStudioTitulo;
+        private System.Windows.Forms.Label lblVisualStudioValor;
         private System.Windows.Forms.Label lblMaquinaTitulo;
         private System.Windows.Forms.Label lblMaquinaValor;
         private System.Windows.Forms.Label lblUsuarioTitulo;
@@ -481,7 +474,5 @@ namespace P3_LPI_Eq03_RegEst.Forms
         private System.Windows.Forms.Label lblFechaTitulo;
         private System.Windows.Forms.Label lblFechaValor;
         private FontAwesome.Sharp.IconButton btnCerrar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

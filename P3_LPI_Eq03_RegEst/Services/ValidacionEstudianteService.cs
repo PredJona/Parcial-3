@@ -11,6 +11,7 @@ namespace P3_LPI_Eq03_RegEst.Services
     {
         public bool ValidarEstudiante(Estudiante estudiante, out string mensaje)
         {
+            // Se valida en orden de captura para mostrar el primer problema concreto al usuario.
             if (estudiante == null)
             {
                 mensaje = "No hay informacion de estudiante para validar.";
@@ -65,12 +66,14 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         public bool ValidarCodigo(string codigo)
         {
+            // Formato esperado: tres letras EST y tres digitos, por ejemplo EST001.
             return !string.IsNullOrWhiteSpace(codigo) &&
                    Regex.IsMatch(codigo.Trim(), @"^EST\d{3}$", RegexOptions.IgnoreCase);
         }
 
         public bool ValidarNombreCompleto(string nombre)
         {
+            // Se exige nombre y apellido como minimo para evitar registros incompletos.
             if (string.IsNullOrWhiteSpace(nombre))
             {
                 return false;
@@ -83,11 +86,13 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         public bool ValidarCursos(List<string> cursos)
         {
+            // La guia solicita que cada estudiante tenga al menos un curso seleccionado.
             return cursos != null && cursos.Any();
         }
 
         public bool ValidarActividades(List<string> actividades)
         {
+            // La actividad extracurricular tambien es obligatoria para completar el registro.
             return actividades != null && actividades.Any();
         }
     }

@@ -8,16 +8,19 @@ namespace P3_LPI_Eq03_RegEst.Helpers
     {
         public static string ObtenerNombreUsuario()
         {
+            // Se usa en la barra inferior y en Acerca de para identificar el entorno.
             return Environment.UserName;
         }
 
         public static string ObtenerNombreMaquina()
         {
+            // Permite mostrar en que equipo fue ejecutada la aplicacion.
             return Environment.MachineName;
         }
 
         public static string ObtenerFechaActual()
         {
+            // Se formatea para mantener consistencia visual en toda la aplicacion.
             return DateTime.Now.ToString("dd/MM/yyyy");
         }
     }

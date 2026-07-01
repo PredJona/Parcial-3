@@ -9,6 +9,7 @@ namespace P3_LPI_Eq03_RegEst.Models
     {
         public Estudiante()
         {
+            // Se inicializan listas vacias para evitar errores al agregar cursos o actividades.
             Cursos = new List<string>();
             Actividades = new List<string>();
         }
@@ -29,6 +30,7 @@ namespace P3_LPI_Eq03_RegEst.Models
             Carrera = carrera;
             Genero = genero;
             Modalidad = modalidad;
+            // Si alguna lista llega nula desde la interfaz, se reemplaza por una lista vacia.
             Cursos = cursos ?? new List<string>();
             Actividades = actividades ?? new List<string>();
             TipoCurso = tipoCurso;
@@ -55,11 +57,13 @@ namespace P3_LPI_Eq03_RegEst.Models
 
         public string ObtenerCursosComoTexto()
         {
+            // El DataGridView necesita una cadena legible, no la lista completa de objetos.
             return Cursos != null && Cursos.Any() ? string.Join(", ", Cursos) : "Sin cursos";
         }
 
         public string ObtenerActividadesComoTexto()
         {
+            // Mantiene la misma transformacion para mostrar varias actividades en una sola celda.
             return Actividades != null && Actividades.Any() ? string.Join(", ", Actividades) : "Sin actividades";
         }
     }

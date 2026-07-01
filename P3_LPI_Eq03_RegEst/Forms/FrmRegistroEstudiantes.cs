@@ -23,6 +23,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             _registroService = new RegistroEstudiantesService();
             _validacionService = new ValidacionEstudianteService();
 
+            // Orden de arranque: tema visual, listas de opciones, datos de prueba y tabla inicial.
             ConfigurarMaterialSkin();
             ConfigurarCombos();
             ConfigurarCursos();
@@ -35,6 +36,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void ConfigurarMaterialSkin()
         {
+            // Configura una paleta base coherente con el dashboard academico azul y verde.
             MaterialSkinManager gestor = MaterialSkinManager.Instance;
             gestor.Theme = MaterialSkinManager.Themes.LIGHT;
             gestor.ColorScheme = new ColorScheme(
@@ -47,6 +49,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void ConfigurarCombos()
         {
+            // Los ComboBox se cargan desde codigo para mantener las opciones centralizadas.
             cmbCarrera.Items.AddRange(new object[]
             {
                 "Ingenieria de Sistemas",
@@ -93,6 +96,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void ConfigurarCursos()
         {
+            // CheckedListBox permite seleccionar varios cursos sin crear controles repetidos.
             clbCursos.Items.AddRange(new object[]
             {
                 "Programacion I",
@@ -108,6 +112,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private static void SeleccionarPrimerElemento(ComboBox comboBox)
         {
+            // Evita que los ComboBox queden vacios cuando el formulario inicia o se limpia.
             if (comboBox.Items.Count > 0)
             {
                 comboBox.SelectedIndex = 0;
@@ -116,6 +121,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void CargarDatosDePrueba()
         {
+            // Datos separados de la logica de registro; sirven solo para demostrar el sistema.
             _registroService.Agregar(new Estudiante(
                 "EST001",
                 "Juan Perez Lopez",
@@ -154,6 +160,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         {
             try
             {
+                // Flujo de alta: construir objeto, validar reglas, evitar duplicados y guardar.
                 Estudiante estudiante = ConstruirEstudianteDesdeFormulario();
                 string mensaje;
 
@@ -185,6 +192,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         {
             try
             {
+                // La busqueda usa el criterio seleccionado y actualiza solo la tabla.
                 string valor = txtBuscar.Text.Trim();
 
                 if (string.IsNullOrWhiteSpace(valor))
@@ -217,6 +225,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         {
             try
             {
+                // Restaura el estado normal despues de una consulta filtrada.
                 txtBuscar.Clear();
                 MostrarEstudiantes(_registroService.ObtenerTodos());
                 lblEstado.Text = "Listado completo";
@@ -231,6 +240,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         {
             try
             {
+                // La eliminacion siempre parte de la fila seleccionada en el DataGridView.
                 if (dgvEstudiantes.CurrentRow == null || dgvEstudiantes.CurrentRow.IsNewRow)
                 {
                     UiHelper.MostrarAdvertencia("Seleccione una fila para eliminar.");
@@ -269,12 +279,14 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
+            // Limpia la captura sin modificar los registros guardados en memoria.
             LimpiarCampos(true);
             lblEstado.Text = "Campos limpios";
         }
 
         private void BtnAcercaDe_Click(object sender, EventArgs e)
         {
+            // Se abre como dialogo modal para volver al registro al cerrarlo.
             using (FrmAcercaDe acercaDe = new FrmAcercaDe())
             {
                 acercaDe.ShowDialog(this);
@@ -283,11 +295,13 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
+            // El cierre real se confirma en el evento FormClosing.
             Close();
         }
 
         private void FrmRegistroEstudiantes_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Permite cancelar el cierre si el usuario presiona No.
             if (!UiHelper.Confirmar("Desea salir de EduRegistro?"))
             {
                 e.Cancel = true;
@@ -296,6 +310,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private Estudiante ConstruirEstudianteDesdeFormulario()
         {
+            // Convierte los controles de la pantalla en una entidad de dominio.
             return new Estudiante(
                 txtCodigo.Text.Trim().ToUpperInvariant(),
                 txtNombreCompleto.Text.Trim(),
@@ -310,6 +325,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private string ObtenerGeneroSeleccionado()
         {
+            // Si ningun radio esta marcado, se retorna vacio para que el validador lo detecte.
             if (rbtnMasculino.Checked)
             {
                 return "Masculino";
@@ -325,6 +341,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private List<string> ObtenerCursosSeleccionados()
         {
+            // CheckedItems contiene objetos; se convierten a texto para el modelo.
             return clbCursos.CheckedItems.Cast<object>()
                 .Select(item => item.ToString())
                 .ToList();
@@ -332,6 +349,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private List<string> ObtenerActividadesSeleccionadas()
         {
+            // Cada CheckBox activo agrega una actividad a la lista del estudiante.
             List<string> actividades = new List<string>();
 
             if (chkDeportes.Checked)
@@ -359,6 +377,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void MostrarEstudiantes(IEnumerable<Estudiante> estudiantes)
         {
+            // Se proyecta a una clase de vista para mostrar listas como texto en el DataGridView.
             List<EstudianteGridRow> datos = estudiantes
                 .Select(estudiante => new EstudianteGridRow
                 {
@@ -382,6 +401,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void ConfigurarColumnasGrid()
         {
+            // Ajusta encabezados y pesos despues de asignar el DataSource.
             if (dgvEstudiantes.Columns.Count == 0)
             {
                 return;
@@ -400,6 +420,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void ConfigurarColumna(string nombre, string encabezado, int peso)
         {
+            // Se verifica la existencia para evitar errores si cambia el origen de datos.
             if (!dgvEstudiantes.Columns.Contains(nombre))
             {
                 return;
@@ -411,6 +432,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void LimpiarCampos(bool limpiarSeleccion)
         {
+            // Devuelve el formulario al estado inicial, conservando la lista en memoria.
             txtCodigo.Clear();
             txtNombreCompleto.Clear();
             rbtnMasculino.Checked = false;
@@ -440,6 +462,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void DgvEstudiantes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Al seleccionar una fila se cargan sus datos para consulta visual o eliminacion.
             if (e.RowIndex < 0)
             {
                 return;
@@ -457,6 +480,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void CargarEstudianteEnFormulario(Estudiante estudiante)
         {
+            // Sincroniza controles simples, combos, radio buttons, cursos y actividades.
             txtCodigo.Text = estudiante.Codigo;
             txtNombreCompleto.Text = estudiante.NombreCompleto;
             cmbCarrera.Text = estudiante.Carrera;
@@ -480,12 +504,14 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void TimerReloj_Tick(object sender, EventArgs e)
         {
+            // Actualiza fecha y hora de la barra inferior una vez por segundo.
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void ActualizarBarraEstado()
         {
+            // Resume informacion del entorno y el total de registros visibles para el usuario.
             lblUsuario.Text = "Usuario: " + SistemaHelper.ObtenerNombreUsuario();
             lblMaquina.Text = "Maquina: " + SistemaHelper.ObtenerNombreMaquina();
             lblTotal.Text = "Total de estudiantes registrados: " + _registroService.ObtenerTodos().Count;
@@ -500,6 +526,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private static void MostrarError(string contexto, Exception ex)
         {
+            // Los eventos principales capturan excepciones y las presentan como advertencias.
             UiHelper.MostrarAdvertencia(contexto + Environment.NewLine + ex.Message);
         }
 

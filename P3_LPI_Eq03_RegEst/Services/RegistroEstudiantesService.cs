@@ -18,17 +18,20 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         public List<Estudiante> ObtenerTodos()
         {
+            // Se devuelve una copia ordenada para que la interfaz no manipule la lista interna directamente.
             return _estudiantes.OrderBy(estudiante => estudiante.Codigo).ToList();
         }
 
         public bool ExisteCodigo(string codigo)
         {
+            // La comparacion ignora mayusculas para evitar duplicados como EST001 y est001.
             return _estudiantes.Any(estudiante =>
                 string.Equals(estudiante.Codigo, codigo, StringComparison.OrdinalIgnoreCase));
         }
 
         public void Agregar(Estudiante estudiante)
         {
+            // La validacion detallada se realiza antes en ValidacionEstudianteService.
             if (estudiante == null)
             {
                 throw new ArgumentNullException("estudiante");
@@ -39,6 +42,7 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         public List<Estudiante> Consultar(string criterio, string valor)
         {
+            // Si no se recibe texto de busqueda, se restaura el listado completo.
             if (string.IsNullOrWhiteSpace(valor))
             {
                 return ObtenerTodos();
@@ -47,6 +51,7 @@ namespace P3_LPI_Eq03_RegEst.Services
             string filtro = valor.Trim();
             IEnumerable<Estudiante> consulta = _estudiantes;
 
+            // El criterio viene del ComboBox; cada caso filtra sobre una propiedad distinta.
             switch ((criterio ?? string.Empty).Trim().ToLowerInvariant())
             {
                 case "codigo":
@@ -62,6 +67,7 @@ namespace P3_LPI_Eq03_RegEst.Services
                     consulta = consulta.Where(estudiante => Contiene(estudiante.Modalidad, filtro));
                     break;
                 default:
+                    // Si el criterio no coincide, se realiza una busqueda general defensiva.
                     consulta = consulta.Where(estudiante =>
                         Contiene(estudiante.Codigo, filtro) ||
                         Contiene(estudiante.NombreCompleto, filtro) ||
@@ -75,6 +81,7 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         public bool EliminarPorCodigo(string codigo)
         {
+            // La eliminacion se hace por codigo porque es el identificador unico del estudiante.
             Estudiante encontrado = _estudiantes.FirstOrDefault(estudiante =>
                 string.Equals(estudiante.Codigo, codigo, StringComparison.OrdinalIgnoreCase));
 
@@ -89,6 +96,7 @@ namespace P3_LPI_Eq03_RegEst.Services
 
         private static bool Contiene(string texto, string filtro)
         {
+            // Centraliza la busqueda parcial sin distinguir mayusculas o minusculas.
             return !string.IsNullOrWhiteSpace(texto) &&
                    texto.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
         }

@@ -8,13 +8,12 @@ namespace P3_LPI_Eq03_RegEst.Forms
     // Rol: Validaciones, utilidades del sistema y formulario de informacion general.
     public partial class FrmAcercaDe : Form
     {
-        private object lblVisualStudioValor;
-
         public FrmAcercaDe()
         {
             InitializeComponent();
+            // Estos datos se cargan al abrir el formulario porque dependen del equipo actual.
             lblFrameworkValor.Text = ".NET Framework 4.8 - Windows Forms";
-            
+            lblVisualStudioValor.Text = "TODO colocar version real de Visual Studio";
             lblMaquinaValor.Text = SistemaHelper.ObtenerNombreMaquina();
             lblUsuarioValor.Text = SistemaHelper.ObtenerNombreUsuario();
             lblFechaValor.Text = SistemaHelper.ObtenerFechaActual();
