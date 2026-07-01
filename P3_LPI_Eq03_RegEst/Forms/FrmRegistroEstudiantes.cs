@@ -205,7 +205,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
                 }
 
                 MostrarEstudiantes(resultados);
-                lblEstado.Text = "Consulta realizada";
+               
             }
             catch (Exception ex)
             {
@@ -219,7 +219,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             {
                 txtBuscar.Clear();
                 MostrarEstudiantes(_registroService.ObtenerTodos());
-                lblEstado.Text = "Listado completo";
+               
             }
             catch (Exception ex)
             {
@@ -270,7 +270,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos(true);
-            lblEstado.Text = "Campos limpios";
+           
         }
 
         private void BtnAcercaDe_Click(object sender, EventArgs e)
@@ -451,7 +451,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             if (estudiante != null)
             {
                 CargarEstudianteEnFormulario(estudiante);
-                lblEstado.Text = "Estudiante seleccionado";
+                
             }
         }
 
@@ -480,8 +480,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
 
         private void TimerReloj_Tick(object sender, EventArgs e)
         {
-            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+
         }
 
         private void ActualizarBarraEstado()
@@ -489,13 +488,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
             lblUsuario.Text = "Usuario: " + SistemaHelper.ObtenerNombreUsuario();
             lblMaquina.Text = "Maquina: " + SistemaHelper.ObtenerNombreMaquina();
             lblTotal.Text = "Total de estudiantes registrados: " + _registroService.ObtenerTodos().Count;
-            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+          
 
-            if (string.IsNullOrWhiteSpace(lblEstado.Text))
-            {
-                lblEstado.Text = "Sistema listo para usar";
-            }
+           
         }
 
         private static void MostrarError(string contexto, Exception ex)

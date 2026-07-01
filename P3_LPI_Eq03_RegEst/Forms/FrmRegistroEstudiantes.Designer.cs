@@ -17,9 +17,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle estiloEncabezado = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle estiloFilas = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle estiloFilasAlternas = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.picUsuariosHeader = new FontAwesome.Sharp.IconPictureBox();
             this.picLogo = new FontAwesome.Sharp.IconPictureBox();
@@ -83,12 +83,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.picAcciones = new FontAwesome.Sharp.IconPictureBox();
             this.lblAccionesTitulo = new System.Windows.Forms.Label();
             this.pnlBarraEstado = new System.Windows.Forms.Panel();
-            this.picStatusClock = new FontAwesome.Sharp.IconPictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.picStatusCalendar = new FontAwesome.Sharp.IconPictureBox();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.picStatusInfo = new FontAwesome.Sharp.IconPictureBox();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.lblMaquina = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.picStatusUser = new FontAwesome.Sharp.IconPictureBox();
@@ -119,9 +113,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.pnlAccionesTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAcciones)).BeginInit();
             this.pnlBarraEstado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusClock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusCalendar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStatusUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +134,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             this.picUsuariosHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picUsuariosHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picUsuariosHeader.ForeColor = System.Drawing.Color.White;
             this.picUsuariosHeader.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.picUsuariosHeader.IconColor = System.Drawing.Color.White;
             this.picUsuariosHeader.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -158,7 +148,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             this.picLogo.BackColor = System.Drawing.Color.White;
             this.picLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picLogo.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
+            this.picLogo.IconChar = FontAwesome.Sharp.IconChar.MortarBoard;
             this.picLogo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
             this.picLogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.picLogo.IconSize = 64;
@@ -176,7 +166,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblSubtituloPrincipal.ForeColor = System.Drawing.Color.White;
             this.lblSubtituloPrincipal.Location = new System.Drawing.Point(113, 68);
             this.lblSubtituloPrincipal.Name = "lblSubtituloPrincipal";
-            this.lblSubtituloPrincipal.Size = new System.Drawing.Size(415, 21);
+            this.lblSubtituloPrincipal.Size = new System.Drawing.Size(417, 28);
             this.lblSubtituloPrincipal.TabIndex = 1;
             this.lblSubtituloPrincipal.Text = "Sistema de Registro Academico de Estudiantes";
             // 
@@ -187,7 +177,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblTituloPrincipal.ForeColor = System.Drawing.Color.White;
             this.lblTituloPrincipal.Location = new System.Drawing.Point(110, 24);
             this.lblTituloPrincipal.Name = "lblTituloPrincipal";
-            this.lblTituloPrincipal.Size = new System.Drawing.Size(383, 41);
+            this.lblTituloPrincipal.Size = new System.Drawing.Size(513, 50);
             this.lblTituloPrincipal.TabIndex = 0;
             this.lblTituloPrincipal.Text = "REGISTRO DE ESTUDIANTES";
             // 
@@ -222,7 +212,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.cmbJornada.FormattingEnabled = true;
             this.cmbJornada.Location = new System.Drawing.Point(316, 250);
             this.cmbJornada.Name = "cmbJornada";
-            this.cmbJornada.Size = new System.Drawing.Size(242, 25);
+            this.cmbJornada.Size = new System.Drawing.Size(242, 31);
             this.cmbJornada.TabIndex = 13;
             // 
             // lblJornada
@@ -232,7 +222,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblJornada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblJornada.Location = new System.Drawing.Point(313, 230);
             this.lblJornada.Name = "lblJornada";
-            this.lblJornada.Size = new System.Drawing.Size(116, 15);
+            this.lblJornada.Size = new System.Drawing.Size(146, 20);
             this.lblJornada.TabIndex = 12;
             this.lblJornada.Text = "Jornada academica:";
             // 
@@ -243,7 +233,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.cmbTipoCurso.FormattingEnabled = true;
             this.cmbTipoCurso.Location = new System.Drawing.Point(316, 194);
             this.cmbTipoCurso.Name = "cmbTipoCurso";
-            this.cmbTipoCurso.Size = new System.Drawing.Size(242, 25);
+            this.cmbTipoCurso.Size = new System.Drawing.Size(242, 31);
             this.cmbTipoCurso.TabIndex = 11;
             // 
             // lblTipoCurso
@@ -253,7 +243,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblTipoCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblTipoCurso.Location = new System.Drawing.Point(313, 174);
             this.lblTipoCurso.Name = "lblTipoCurso";
-            this.lblTipoCurso.Size = new System.Drawing.Size(83, 15);
+            this.lblTipoCurso.Size = new System.Drawing.Size(107, 20);
             this.lblTipoCurso.TabIndex = 10;
             this.lblTipoCurso.Text = "Tipo de curso:";
             // 
@@ -264,7 +254,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.cmbModalidad.FormattingEnabled = true;
             this.cmbModalidad.Location = new System.Drawing.Point(316, 139);
             this.cmbModalidad.Name = "cmbModalidad";
-            this.cmbModalidad.Size = new System.Drawing.Size(242, 25);
+            this.cmbModalidad.Size = new System.Drawing.Size(242, 31);
             this.cmbModalidad.TabIndex = 9;
             // 
             // lblModalidad
@@ -274,7 +264,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblModalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblModalidad.Location = new System.Drawing.Point(313, 119);
             this.lblModalidad.Name = "lblModalidad";
-            this.lblModalidad.Size = new System.Drawing.Size(120, 15);
+            this.lblModalidad.Size = new System.Drawing.Size(164, 20);
             this.lblModalidad.TabIndex = 8;
             this.lblModalidad.Text = "Modalidad de estudio:";
             // 
@@ -285,7 +275,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.cmbCarrera.FormattingEnabled = true;
             this.cmbCarrera.Location = new System.Drawing.Point(316, 84);
             this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(242, 25);
+            this.cmbCarrera.Size = new System.Drawing.Size(242, 31);
             this.cmbCarrera.TabIndex = 7;
             // 
             // lblCarrera
@@ -295,7 +285,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblCarrera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblCarrera.Location = new System.Drawing.Point(313, 64);
             this.lblCarrera.Name = "lblCarrera";
-            this.lblCarrera.Size = new System.Drawing.Size(49, 15);
+            this.lblCarrera.Size = new System.Drawing.Size(64, 20);
             this.lblCarrera.TabIndex = 6;
             this.lblCarrera.Text = "Carrera:";
             // 
@@ -315,7 +305,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.rbtnFemenino.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.rbtnFemenino.Location = new System.Drawing.Point(138, 15);
             this.rbtnFemenino.Name = "rbtnFemenino";
-            this.rbtnFemenino.Size = new System.Drawing.Size(86, 23);
+            this.rbtnFemenino.Size = new System.Drawing.Size(106, 27);
             this.rbtnFemenino.TabIndex = 1;
             this.rbtnFemenino.TabStop = true;
             this.rbtnFemenino.Text = "Femenino";
@@ -327,7 +317,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.rbtnMasculino.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.rbtnMasculino.Location = new System.Drawing.Point(18, 15);
             this.rbtnMasculino.Name = "rbtnMasculino";
-            this.rbtnMasculino.Size = new System.Drawing.Size(89, 23);
+            this.rbtnMasculino.Size = new System.Drawing.Size(108, 27);
             this.rbtnMasculino.TabIndex = 0;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
@@ -340,9 +330,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblGenero.Location = new System.Drawing.Point(15, 195);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(50, 15);
+            this.lblGenero.Size = new System.Drawing.Size(64, 20);
             this.lblGenero.TabIndex = 4;
-            this.lblGenero.Text = "Genero:";
+            this.lblGenero.Text = "Género:";
             // 
             // txtNombreCompleto
             // 
@@ -350,7 +340,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.txtNombreCompleto.Location = new System.Drawing.Point(18, 139);
             this.txtNombreCompleto.MaxLength = 80;
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(260, 25);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(260, 30);
             this.txtNombreCompleto.TabIndex = 3;
             // 
             // lblNombreCompleto
@@ -360,7 +350,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblNombreCompleto.Location = new System.Drawing.Point(15, 119);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(110, 15);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(141, 20);
             this.lblNombreCompleto.TabIndex = 2;
             this.lblNombreCompleto.Text = "Nombre completo:";
             // 
@@ -371,7 +361,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.txtCodigo.Location = new System.Drawing.Point(18, 84);
             this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(260, 25);
+            this.txtCodigo.Size = new System.Drawing.Size(260, 30);
             this.txtCodigo.TabIndex = 1;
             // 
             // lblCodigo
@@ -381,7 +371,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblCodigo.Location = new System.Drawing.Point(15, 64);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(129, 15);
+            this.lblCodigo.Size = new System.Drawing.Size(161, 20);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo de estudiante:";
             // 
@@ -417,7 +407,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblDatosTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(96)))), ((int)(((byte)(223)))));
             this.lblDatosTitulo.Location = new System.Drawing.Point(48, 11);
             this.lblDatosTitulo.Name = "lblDatosTitulo";
-            this.lblDatosTitulo.Size = new System.Drawing.Size(231, 20);
+            this.lblDatosTitulo.Size = new System.Drawing.Size(362, 25);
             this.lblDatosTitulo.TabIndex = 0;
             this.lblDatosTitulo.Text = "1. DATOS PERSONALES Y ACADEMICOS";
             // 
@@ -475,7 +465,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblCursosTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(139)))), ((int)(((byte)(76)))));
             this.lblCursosTitulo.Location = new System.Drawing.Point(48, 11);
             this.lblCursosTitulo.Name = "lblCursosTitulo";
-            this.lblCursosTitulo.Size = new System.Drawing.Size(162, 20);
+            this.lblCursosTitulo.Size = new System.Drawing.Size(209, 25);
             this.lblCursosTitulo.TabIndex = 0;
             this.lblCursosTitulo.Text = "2. CURSOS INSCRITOS";
             // 
@@ -499,7 +489,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.chkInvestigacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chkInvestigacion.Location = new System.Drawing.Point(26, 214);
             this.chkInvestigacion.Name = "chkInvestigacion";
-            this.chkInvestigacion.Size = new System.Drawing.Size(112, 23);
+            this.chkInvestigacion.Size = new System.Drawing.Size(132, 27);
             this.chkInvestigacion.TabIndex = 4;
             this.chkInvestigacion.Text = "Investigacion";
             this.chkInvestigacion.UseVisualStyleBackColor = true;
@@ -510,7 +500,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.chkArte.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chkArte.Location = new System.Drawing.Point(26, 166);
             this.chkArte.Name = "chkArte";
-            this.chkArte.Size = new System.Drawing.Size(53, 23);
+            this.chkArte.Size = new System.Drawing.Size(64, 27);
             this.chkArte.TabIndex = 3;
             this.chkArte.Text = "Arte";
             this.chkArte.UseVisualStyleBackColor = true;
@@ -521,7 +511,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.chkMusica.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chkMusica.Location = new System.Drawing.Point(26, 118);
             this.chkMusica.Name = "chkMusica";
-            this.chkMusica.Size = new System.Drawing.Size(70, 23);
+            this.chkMusica.Size = new System.Drawing.Size(85, 27);
             this.chkMusica.TabIndex = 2;
             this.chkMusica.Text = "Musica";
             this.chkMusica.UseVisualStyleBackColor = true;
@@ -532,7 +522,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.chkDeportes.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chkDeportes.Location = new System.Drawing.Point(26, 70);
             this.chkDeportes.Name = "chkDeportes";
-            this.chkDeportes.Size = new System.Drawing.Size(82, 23);
+            this.chkDeportes.Size = new System.Drawing.Size(101, 27);
             this.chkDeportes.TabIndex = 1;
             this.chkDeportes.Text = "Deportes";
             this.chkDeportes.UseVisualStyleBackColor = true;
@@ -600,12 +590,12 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnMostrarTodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrarTodos.IconSize = 18;
             this.btnMostrarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarTodos.Location = new System.Drawing.Point(190, 218);
+            this.btnMostrarTodos.Location = new System.Drawing.Point(200, 205);
             this.btnMostrarTodos.Name = "btnMostrarTodos";
             this.btnMostrarTodos.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnMostrarTodos.Size = new System.Drawing.Size(145, 42);
+            this.btnMostrarTodos.Size = new System.Drawing.Size(145, 81);
             this.btnMostrarTodos.TabIndex = 6;
-            this.btnMostrarTodos.Text = "Mostrar todos";
+            this.btnMostrarTodos.Text = "Mostrar todos los estudiantes";
             this.btnMostrarTodos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTipPrincipal.SetToolTip(this.btnMostrarTodos, "Restaurar listado completo");
             this.btnMostrarTodos.UseVisualStyleBackColor = false;
@@ -618,7 +608,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.btnConsultar.IconColor = System.Drawing.Color.White;
             this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultar.IconSize = 18;
@@ -626,9 +616,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnConsultar.Location = new System.Drawing.Point(26, 218);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.btnConsultar.Size = new System.Drawing.Size(138, 42);
+            this.btnConsultar.Size = new System.Drawing.Size(138, 63);
             this.btnConsultar.TabIndex = 5;
-            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.Text = "Consultar Estudiante";
             this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTipPrincipal.SetToolTip(this.btnConsultar, "Buscar estudiantes");
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -641,7 +631,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.cmbCriterioBusqueda.FormattingEnabled = true;
             this.cmbCriterioBusqueda.Location = new System.Drawing.Point(26, 166);
             this.cmbCriterioBusqueda.Name = "cmbCriterioBusqueda";
-            this.cmbCriterioBusqueda.Size = new System.Drawing.Size(309, 25);
+            this.cmbCriterioBusqueda.Size = new System.Drawing.Size(309, 31);
             this.cmbCriterioBusqueda.TabIndex = 4;
             // 
             // lblCriterioBusqueda
@@ -651,7 +641,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblCriterioBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblCriterioBusqueda.Location = new System.Drawing.Point(23, 146);
             this.lblCriterioBusqueda.Name = "lblCriterioBusqueda";
-            this.lblCriterioBusqueda.Size = new System.Drawing.Size(68, 15);
+            this.lblCriterioBusqueda.Size = new System.Drawing.Size(89, 20);
             this.lblCriterioBusqueda.TabIndex = 3;
             this.lblCriterioBusqueda.Text = "Buscar por:";
             // 
@@ -660,7 +650,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtBuscar.Location = new System.Drawing.Point(26, 93);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(309, 25);
+            this.txtBuscar.Size = new System.Drawing.Size(309, 30);
             this.txtBuscar.TabIndex = 2;
             // 
             // lblBuscar
@@ -670,7 +660,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
             this.lblBuscar.Location = new System.Drawing.Point(23, 73);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(158, 15);
+            this.lblBuscar.Size = new System.Drawing.Size(211, 20);
             this.lblBuscar.TabIndex = 1;
             this.lblBuscar.Text = "Buscar por codigo o nombre:";
             // 
@@ -689,7 +679,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             this.picConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(238)))));
             this.picConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(126)))), ((int)(((byte)(24)))));
-            this.picConsulta.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.picConsulta.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.picConsulta.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(126)))), ((int)(((byte)(24)))));
             this.picConsulta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.picConsulta.IconSize = 24;
@@ -706,7 +696,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblConsultaTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(126)))), ((int)(((byte)(24)))));
             this.lblConsultaTitulo.Location = new System.Drawing.Point(48, 11);
             this.lblConsultaTitulo.Name = "lblConsultaTitulo";
-            this.lblConsultaTitulo.Size = new System.Drawing.Size(184, 20);
+            this.lblConsultaTitulo.Size = new System.Drawing.Size(242, 25);
             this.lblConsultaTitulo.TabIndex = 0;
             this.lblConsultaTitulo.Text = "CONSULTAR ESTUDIANTE";
             // 
@@ -728,27 +718,29 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.dgvEstudiantes.AllowUserToAddRows = false;
             this.dgvEstudiantes.AllowUserToDeleteRows = false;
             this.dgvEstudiantes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEstudiantes.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            estiloEncabezado.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            estiloEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
-            estiloEncabezado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            estiloEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
-            estiloEncabezado.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
-            estiloEncabezado.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
-            estiloEncabezado.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEstudiantes.ColumnHeadersDefaultCellStyle = estiloEncabezado;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEstudiantes.ColumnHeadersHeight = 38;
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            estiloFilas.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            estiloFilas.BackColor = System.Drawing.Color.White;
-            estiloFilas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            estiloFilas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
-            estiloFilas.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(232)))), ((int)(((byte)(253)))));
-            estiloFilas.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
-            estiloFilas.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEstudiantes.DefaultCellStyle = estiloFilas;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(232)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEstudiantes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEstudiantes.EnableHeadersVisualStyles = false;
             this.dgvEstudiantes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(242)))));
             this.dgvEstudiantes.Location = new System.Drawing.Point(12, 58);
@@ -756,8 +748,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.dgvEstudiantes.Name = "dgvEstudiantes";
             this.dgvEstudiantes.ReadOnly = true;
             this.dgvEstudiantes.RowHeadersVisible = false;
-            estiloFilasAlternas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvEstudiantes.AlternatingRowsDefaultCellStyle = estiloFilasAlternas;
+            this.dgvEstudiantes.RowHeadersWidth = 51;
             this.dgvEstudiantes.RowTemplate.Height = 32;
             this.dgvEstudiantes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -780,7 +771,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             this.picTabla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.picTabla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
-            this.picTabla.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.picTabla.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
             this.picTabla.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
             this.picTabla.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.picTabla.IconSize = 24;
@@ -797,7 +788,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblListaTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
             this.lblListaTitulo.Location = new System.Drawing.Point(48, 11);
             this.lblListaTitulo.Name = "lblListaTitulo";
-            this.lblListaTitulo.Size = new System.Drawing.Size(297, 20);
+            this.lblListaTitulo.Size = new System.Drawing.Size(355, 25);
             this.lblListaTitulo.TabIndex = 0;
             this.lblListaTitulo.Text = "LISTA DE ESTUDIANTES REGISTRADOS";
             // 
@@ -824,13 +815,13 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnSalir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 28;
-            this.btnSalir.Location = new System.Drawing.Point(354, 68);
+            this.btnSalir.Location = new System.Drawing.Point(345, 227);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(88, 86);
+            this.btnSalir.Size = new System.Drawing.Size(102, 83);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -846,15 +837,15 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcercaDe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAcercaDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.btnAcercaDe.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.btnAcercaDe.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
             this.btnAcercaDe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
             this.btnAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAcercaDe.IconSize = 28;
-            this.btnAcercaDe.Location = new System.Drawing.Point(266, 68);
+            this.btnAcercaDe.Location = new System.Drawing.Point(17, 256);
             this.btnAcercaDe.Name = "btnAcercaDe";
-            this.btnAcercaDe.Size = new System.Drawing.Size(80, 86);
+            this.btnAcercaDe.Size = new System.Drawing.Size(322, 54);
             this.btnAcercaDe.TabIndex = 4;
-            this.btnAcercaDe.Text = "Acerca de";
+            this.btnAcercaDe.Text = "Acerca del Proyecto";
             this.btnAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTipPrincipal.SetToolTip(this.btnAcercaDe, "Ver informacion del proyecto");
@@ -872,9 +863,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnLimpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 28;
-            this.btnLimpiar.Location = new System.Drawing.Point(180, 68);
+            this.btnLimpiar.Location = new System.Drawing.Point(18, 193);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(78, 86);
+            this.btnLimpiar.Size = new System.Drawing.Size(321, 57);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -894,9 +885,9 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnEliminar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 28;
-            this.btnEliminar.Location = new System.Drawing.Point(94, 68);
+            this.btnEliminar.Location = new System.Drawing.Point(18, 125);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 86);
+            this.btnEliminar.Size = new System.Drawing.Size(321, 62);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar estudiante";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -918,7 +909,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.btnAgregar.IconSize = 30;
             this.btnAgregar.Location = new System.Drawing.Point(18, 68);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 86);
+            this.btnAgregar.Size = new System.Drawing.Size(321, 51);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar estudiante";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -942,7 +933,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             this.picAcciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.picAcciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
-            this.picAcciones.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.picAcciones.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.picAcciones.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
             this.picAcciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.picAcciones.IconSize = 24;
@@ -959,7 +950,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblAccionesTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(59)))), ((int)(((byte)(203)))));
             this.lblAccionesTitulo.Location = new System.Drawing.Point(48, 11);
             this.lblAccionesTitulo.Name = "lblAccionesTitulo";
-            this.lblAccionesTitulo.Size = new System.Drawing.Size(80, 20);
+            this.lblAccionesTitulo.Size = new System.Drawing.Size(104, 25);
             this.lblAccionesTitulo.TabIndex = 0;
             this.lblAccionesTitulo.Text = "ACCIONES";
             // 
@@ -969,12 +960,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBarraEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
             this.pnlBarraEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBarraEstado.Controls.Add(this.picStatusClock);
-            this.pnlBarraEstado.Controls.Add(this.lblHora);
-            this.pnlBarraEstado.Controls.Add(this.picStatusCalendar);
-            this.pnlBarraEstado.Controls.Add(this.lblFecha);
-            this.pnlBarraEstado.Controls.Add(this.picStatusInfo);
-            this.pnlBarraEstado.Controls.Add(this.lblEstado);
             this.pnlBarraEstado.Controls.Add(this.lblMaquina);
             this.pnlBarraEstado.Controls.Add(this.lblTotal);
             this.pnlBarraEstado.Controls.Add(this.picStatusUser);
@@ -984,85 +969,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.pnlBarraEstado.Size = new System.Drawing.Size(1584, 56);
             this.pnlBarraEstado.TabIndex = 7;
             // 
-            // picStatusClock
-            // 
-            this.picStatusClock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picStatusClock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.picStatusClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusClock.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.picStatusClock.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusClock.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.picStatusClock.IconSize = 22;
-            this.picStatusClock.Location = new System.Drawing.Point(1436, 17);
-            this.picStatusClock.Name = "picStatusClock";
-            this.picStatusClock.Size = new System.Drawing.Size(22, 22);
-            this.picStatusClock.TabIndex = 9;
-            this.picStatusClock.TabStop = false;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.lblHora.Location = new System.Drawing.Point(1468, 20);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(71, 15);
-            this.lblHora.TabIndex = 8;
-            this.lblHora.Text = "10:30:45 AM";
-            // 
-            // picStatusCalendar
-            // 
-            this.picStatusCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picStatusCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.picStatusCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusCalendar.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
-            this.picStatusCalendar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusCalendar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.picStatusCalendar.IconSize = 22;
-            this.picStatusCalendar.Location = new System.Drawing.Point(1278, 17);
-            this.picStatusCalendar.Name = "picStatusCalendar";
-            this.picStatusCalendar.Size = new System.Drawing.Size(22, 22);
-            this.picStatusCalendar.TabIndex = 7;
-            this.picStatusCalendar.TabStop = false;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.lblFecha.Location = new System.Drawing.Point(1309, 20);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(68, 15);
-            this.lblFecha.TabIndex = 6;
-            this.lblFecha.Text = "30/06/2025";
-            // 
-            // picStatusInfo
-            // 
-            this.picStatusInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.picStatusInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusInfo.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.picStatusInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.picStatusInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.picStatusInfo.IconSize = 20;
-            this.picStatusInfo.Location = new System.Drawing.Point(708, 18);
-            this.picStatusInfo.Name = "picStatusInfo";
-            this.picStatusInfo.Size = new System.Drawing.Size(20, 20);
-            this.picStatusInfo.TabIndex = 5;
-            this.picStatusInfo.TabStop = false;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
-            this.lblEstado.Location = new System.Drawing.Point(736, 20);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(124, 15);
-            this.lblEstado.TabIndex = 4;
-            this.lblEstado.Text = "Sistema listo para usar";
-            // 
             // lblMaquina
             // 
             this.lblMaquina.AutoSize = true;
@@ -1070,7 +976,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblMaquina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
             this.lblMaquina.Location = new System.Drawing.Point(484, 20);
             this.lblMaquina.Name = "lblMaquina";
-            this.lblMaquina.Size = new System.Drawing.Size(92, 15);
+            this.lblMaquina.Size = new System.Drawing.Size(121, 20);
             this.lblMaquina.TabIndex = 3;
             this.lblMaquina.Text = "Maquina: Equipo";
             // 
@@ -1081,7 +987,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
             this.lblTotal.Location = new System.Drawing.Point(230, 20);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(201, 15);
+            this.lblTotal.Size = new System.Drawing.Size(235, 20);
             this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "Total de estudiantes registrados: 0";
             // 
@@ -1106,7 +1012,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(57)))), ((int)(((byte)(143)))));
             this.lblUsuario.Location = new System.Drawing.Point(58, 20);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(80, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(110, 20);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario: Admin";
             // 
@@ -1117,7 +1023,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             // 
             // FrmRegistroEstudiantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1584, 861);
@@ -1170,9 +1076,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
             ((System.ComponentModel.ISupportInitialize)(this.picAcciones)).EndInit();
             this.pnlBarraEstado.ResumeLayout(false);
             this.pnlBarraEstado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusClock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusCalendar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStatusInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStatusUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -1241,12 +1144,6 @@ namespace P3_LPI_Eq03_RegEst.Forms
         private FontAwesome.Sharp.IconPictureBox picAcciones;
         private System.Windows.Forms.Label lblAccionesTitulo;
         private System.Windows.Forms.Panel pnlBarraEstado;
-        private FontAwesome.Sharp.IconPictureBox picStatusClock;
-        private System.Windows.Forms.Label lblHora;
-        private FontAwesome.Sharp.IconPictureBox picStatusCalendar;
-        private System.Windows.Forms.Label lblFecha;
-        private FontAwesome.Sharp.IconPictureBox picStatusInfo;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblMaquina;
         private System.Windows.Forms.Label lblTotal;
         private FontAwesome.Sharp.IconPictureBox picStatusUser;

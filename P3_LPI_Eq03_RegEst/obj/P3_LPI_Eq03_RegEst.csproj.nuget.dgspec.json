@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {}
+    "C:\\Users\\eldev\\OneDrive\\Desktop\\P3_LPI_Eq01_RegEst\\Parcial-3\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {
+    "C:\\Users\\eldev\\OneDrive\\Desktop\\P3_LPI_Eq01_RegEst\\Parcial-3\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+        "projectUniqueName": "C:\\Users\\eldev\\OneDrive\\Desktop\\P3_LPI_Eq01_RegEst\\Parcial-3\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
         "projectName": "P3_LPI_Eq03_RegEst",
-        "projectPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
-        "packagesPath": "C:\\Users\\jr215\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\obj\\",
+        "projectPath": "C:\\Users\\eldev\\OneDrive\\Desktop\\P3_LPI_Eq01_RegEst\\Parcial-3\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+        "packagesPath": "C:\\Users\\eldev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eldev\\OneDrive\\Desktop\\P3_LPI_Eq01_RegEst\\Parcial-3\\P3_LPI_Eq03_RegEst\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jr215\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eldev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +30,6 @@
         },
         "frameworks": {
           "net48": {
-            "framework": "net48",
             "targetAlias": "net48",
             "projectReferences": {}
           }
@@ -41,11 +44,10 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net48": {
-          "framework": "net48",
           "targetAlias": "net48",
           "dependencies": {
             "FontAwesome.Sharp": {
@@ -65,7 +67,7 @@
               "version": "[10.0.9, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313\\RuntimeIdentifierGraph.json"
         }
       }
     }
