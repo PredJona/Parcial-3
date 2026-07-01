@@ -4,7 +4,7 @@ using P3_LPI_Eq03_RegEst.Helpers;
 
 namespace P3_LPI_Eq03_RegEst.Forms
 {
-    // Responsable:     
+    // Responsable:     Karen Wen
     // Rol: Validaciones, utilidades del sistema y formulario de informacion general.
     public partial class FrmAcercaDe : Form
     {

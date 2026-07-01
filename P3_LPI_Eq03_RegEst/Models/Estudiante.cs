@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace P3_LPI_Eq03_RegEst.Models
 {
-    // Responsable: __________________________
+    // Responsable: Davis Batista
     // Rol: Modelo de datos y estructura de la entidad Estudiante.
     public class Estudiante
     {

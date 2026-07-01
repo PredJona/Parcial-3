@@ -2,7 +2,7 @@ using System;
 
 namespace P3_LPI_Eq03_RegEst.Helpers
 {
-    // Responsable: __________________________
+    // Responsable: Jose Martinez
     // Rol: Validaciones, utilidades del sistema y formulario de informacion general.
     public static class SistemaHelper
     {
