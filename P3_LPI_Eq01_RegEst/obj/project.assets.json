@@ -571,9 +571,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+      "projectUniqueName": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq01_RegEst.csproj",
       "projectName": "P3_LPI_Eq03_RegEst",
-      "projectPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+      "projectPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq01_RegEst.csproj",
       "packagesPath": "C:\\Users\\jr215\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\obj\\",
       "projectStyle": "PackageReference",

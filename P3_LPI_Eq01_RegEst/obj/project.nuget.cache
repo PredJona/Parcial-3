@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qmOLYfxHnCY=",
+  "dgSpecHash": "pv67SsoBMpc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq03_RegEst.csproj",
+  "projectFilePath": "C:\\Users\\jr215\\OneDrive\\Documentos\\trabajos universidad\\Parcial3_LPI_Eq03\\P3_LPI_Eq03_RegEst\\P3_LPI_Eq01_RegEst.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jr215\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\jr215\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",

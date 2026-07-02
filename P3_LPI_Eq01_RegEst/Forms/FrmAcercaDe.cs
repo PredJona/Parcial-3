@@ -13,7 +13,7 @@ namespace P3_LPI_Eq03_RegEst.Forms
             InitializeComponent();
             // Estos datos se cargan al abrir el formulario porque dependen del equipo actual.
             lblFrameworkValor.Text = ".NET Framework 4.8 - Windows Forms";
-            lblVisualStudioValor.Text = "TODO colocar version real de Visual Studio";
+            lblVisualStudioValor.Text = "2026";
             lblMaquinaValor.Text = SistemaHelper.ObtenerNombreMaquina();
             lblUsuarioValor.Text = SistemaHelper.ObtenerNombreUsuario();
             lblFechaValor.Text = SistemaHelper.ObtenerFechaActual();

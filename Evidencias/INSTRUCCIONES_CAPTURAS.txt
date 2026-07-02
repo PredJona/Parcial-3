@@ -1,9 +1,0 @@
-INSTRUCCIONES PARA CAPTURAS DE EVIDENCIA
-
-Antes de entregar, tomar 3 capturas completas de la aplicacion:
-
-1. Pantalla principal con los datos de prueba cargados.
-2. Registro de un estudiante nuevo con datos distintos.
-3. Consulta o eliminacion de un estudiante seleccionado.
-
-Las capturas deben mostrar la ventana completa de EduRegistro, incluyendo encabezado, formulario, tabla, acciones y barra inferior.
